@@ -1,0 +1,8 @@
+
+    <ul>
+    <li *ngFor="let animal of dadosExibidos">
+        <img src="{{ animal.imagem }}" width="50" height="50"
+        (click)="exibeDetalhes(animal)" />
+        <b>{{ animal.nome}}</b>
+    </li>
+</ul>
