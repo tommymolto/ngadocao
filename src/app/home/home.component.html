@@ -1,5 +1,5 @@
-
-    <ul>
+<a (click)="cadastraAnimal()">Cadastro</a>
+<ul>
     <li *ngFor="let animal of dadosExibidos">
         <img src="{{ animal.imagem }}" width="50" height="50"
         (click)="exibeDetalhes(animal)" />

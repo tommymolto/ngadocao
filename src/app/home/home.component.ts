@@ -26,4 +26,7 @@ export class HomeComponent implements OnInit {
   exibeDetalhes(animal){
     this.rota.navigate(['/gato/'+ animal.id ]);
   }
+  cadastraAnimal(){
+    this.rota.navigate(['/cadastro' ]);
+  }
 }

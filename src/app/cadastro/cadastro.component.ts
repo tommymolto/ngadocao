@@ -4,12 +4,13 @@ import { BrowserModule } from "@angular/platform-browser";
 import { ConsumoapiService } from '../consumoapi.service';
 import { AgmCoreModule, MapsAPILoader } from '@agm/core';
 import {} from '@types/googlemaps'; 
+import { NotificationsService } from 'angular2-notifications';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
-  providers: [ConsumoapiService, AgmCoreModule]
+  providers: [ConsumoapiService, AgmCoreModule, NotificationsService]
 })
 export class CadastroComponent implements OnInit {
 
@@ -29,7 +30,8 @@ export class CadastroComponent implements OnInit {
   constructor(
     public api: ConsumoapiService,
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone) { }
+    private ngZone: NgZone,
+     private toast: NotificationsService) { }
 
   ngOnInit() {
     this.searchControl = new FormControl();
@@ -63,7 +65,13 @@ export class CadastroComponent implements OnInit {
 
   salvar(){
     this.api.insereAnimal(this.animal).subscribe(ret => {
-      console.log(ret);
+        console.log(ret);
+        /*const toast = this.toast.success('Animal Criado', 'Parabens', {
+        timeOut: 3000,
+        showProgressBar: true,
+        pauseOnHover: true,
+        clickToClose: true
+      });*/
     })
   }
   private setCurrentPosition() {

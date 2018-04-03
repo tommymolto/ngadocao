@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ConsumoapiService } from './consumoapi.service';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 /* FIM PROJETO */
 
@@ -29,7 +30,9 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    
     FormsModule,
+    SimpleNotificationsModule.forRoot(),
      AgmCoreModule.forRoot({
        apiKey: "AIzaSyBXtF5Kq5zhprBk0PsJMGdqLm_yLXKXf-c",
       libraries: ["places"]
