@@ -4,5 +4,11 @@
     <p><label for="imagem">Imagem</label><input type="text" name="nome"/></p>
     <p><label for="descricao">Descricao</label><input type="text" name="nome"/></p>
     <p><label for="telefone">Telefone</label><input type="text" name="nome"/></p>
+    <div class="form-group">
+        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+      </div>
+      <agm-map [latitude]="animal.lat" [longitude]="animal.lgn" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker [latitude]="animal.lat" [longitude]="animal.lgn"></agm-marker>
+      </agm-map>
     <p><button (click)="salvar()">Salvar</button></p>
 </div>
