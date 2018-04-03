@@ -9,6 +9,9 @@ import { ListaComponent } from './lista/lista.component';
 import { DetalheComponent } from './detalhe/detalhe.component';
 import { HomeComponent } from './home/home.component';
 import { ConsumoapiService } from './consumoapi.service';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { FormsModule }   from '@angular/forms';
+
 /* FIM PROJETO */
 
 
@@ -18,12 +21,14 @@ import { ConsumoapiService } from './consumoapi.service';
     AppComponent,
     ListaComponent,
     DetalheComponent,
-    HomeComponent
+    HomeComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ConsumoapiService],
   bootstrap: [AppComponent]

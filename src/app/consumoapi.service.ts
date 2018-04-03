@@ -16,4 +16,7 @@ export class ConsumoapiService {
         return this.web.get(this.urlAPI + '/'+ id);
 
     }
+    insereAnimal(animal){
+        return this.web.post(this.urlAPI , animal);
+    }
 }
