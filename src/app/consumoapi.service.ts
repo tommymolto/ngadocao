@@ -12,5 +12,8 @@ export class ConsumoapiService {
     listaAnimais(){
         return this.web.get(this.urlAPI);
     }      
+    getAnimal(id){
+        return this.web.get(this.urlAPI + '/'+ id);
 
+    }
 }

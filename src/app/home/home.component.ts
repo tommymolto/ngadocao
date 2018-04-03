@@ -24,6 +24,6 @@ export class HomeComponent implements OnInit {
       });
   }
   exibeDetalhes(animal){
-    this.rota.navigate(['/gatos/'+ animal.id])
+    this.rota.navigate(['/gato/'+ animal.id ]);
   }
 }
